@@ -1,0 +1,34 @@
+<openerp>
+    <data>
+      <record id="first_contact" model="shows.stage">
+	<field name="name">First Contact</field>
+	<field name="sequence" type="int">10</field>
+	<field name="folded" eval="False"/>
+      </record>
+      <record id="negociation" model="shows.stage">
+	<field name="name">Negociation</field>
+	<field name="sequence" type="int">20</field>
+	<field name="folded" eval="False"/>
+      </record>
+      <record id="wait_participant" model="shows.stage">
+	<field name="name">Wait Participants</field>
+	<field name="sequence" type="int">30</field>
+	<field name="folded" eval="False"/>
+      </record>
+      <record id="option" model="shows.stage">
+	<field name="name">Options</field>
+	<field name="sequence" type="int">40</field>
+	<field name="folded" eval="False"/>
+      </record>
+      <record id="accepted" model="shows.stage">
+	<field name="name">Accepted</field>
+	<field name="sequence" type="int">50</field>
+	<field name="folded" eval="True"/>
+      </record>
+      <record id="rejected" model="shows.stage">
+	<field name="name">Rejected</field>
+	<field name="sequence" type="int">60</field>
+	<field name="folded" eval="True"/>
+      </record>
+    </data>
+</openerp>

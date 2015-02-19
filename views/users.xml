@@ -1,0 +1,30 @@
+<openerp><data>
+  <record model="ir.ui.view" id="users_performer_form_view">
+    <field name="name">users.performer</field>
+    <field name="model">res.users</field>
+    <field name="inherit_id" ref="base.view_users_simple_form"/>
+    <field name="arch" type="xml">
+      <sheet position="inside">
+	<notebook>
+	  <page string="Shows">
+	    <group>
+	      <field name="performer"/>
+	      <field name="show_ids"/>
+	    </group>
+	  </page>
+	</notebook>
+      </sheet>
+    </field>
+  </record>
+
+  <record model="ir.actions.act_window" id="performer_list_action">
+    <field name="name">Performers</field>
+    <field name="res_model">res.users</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="performer_menu" name="Performer"
+	    parent="configuration_shows_menu"
+	    action="performer_list_action"/>
+
+</data></openerp>

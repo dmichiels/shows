@@ -1,0 +1,28 @@
+<openerp><data>
+  <record model="ir.ui.view" id="spectacle_form_view">
+    <field name="name">shows.spectacle.form</field>
+    <field name="model">shows.spectacle</field>
+    <field name="arch" type="xml">
+      <form string="Spectacle Form">
+	<sheet>
+	  <group>
+	    <field name="name"/>
+	  </group>
+	  <field name="performer_ids"/>
+	</sheet>
+      </form>
+    </field>
+  </record>
+
+  <record model="ir.actions.act_window" id="spectacle_list_action">
+    <field name="name">Spectacles</field>
+    <field name="res_model">shows.spectacle</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Create the first shows</p>
+    </field>
+  </record>
+  <menuitem id="spectacle_menu" name="Show" parent="global_shows_menu"
+	    action="spectacle_list_action"/>
+</data></openerp>

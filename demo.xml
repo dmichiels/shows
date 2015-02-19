@@ -1,0 +1,27 @@
+<openerp>
+    <data>
+      <!--  <record id="chassepierre" model="shows.shows">
+	<field name="name">Chasse-Pierre</field>
+	<field name="starting_date">23/11/2014</field>
+	<field name="duration" type="int">2</field>
+	<field name="info">Bla bla bla</field>
+      </record>
+        -->
+        <!--   <record id="object1" model="shows.shows"> -->
+        <!--     <field name="name">Object 1</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object2" model="shows.shows"> -->
+        <!--     <field name="name">Object 2</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object3" model="shows.shows"> -->
+        <!--     <field name="name">Object 3</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object4" model="shows.shows"> -->
+        <!--     <field name="name">Object 4</field> -->
+        <!--   </record> -->
+        <!--  -->
+    </data>
+</openerp>

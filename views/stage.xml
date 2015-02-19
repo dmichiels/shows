@@ -1,0 +1,37 @@
+<openerp><data>
+  <record model="ir.ui.view" id="perf_date_tree_view">
+    <field name="name">performer_date.tree</field>
+    <field name="model">shows.performer_date</field>
+    <field name="arch" type="xml">
+      <tree string="Performer Date list">
+	<field name="performer_id"/>
+	<field name="state"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Menu record -->
+  <record model="ir.actions.act_window" id="shows_stage_list_action">
+    <field name="name">Stage</field>
+    <field name="res_model">shows.stage</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Create the first stage</p>
+    </field>
+  </record>
+  <record model="ir.actions.act_window" id="shows_perf_date_list_action">
+    <field name="name">Perf_date</field>
+    <field name="res_model">shows.performer_date</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Create the first link</p>
+    </field>
+  </record>
+  <menuitem id="configuration_shows_menu" name="Configuration" parent="main_shows_menu"/>
+  <menuitem id="configuration_stage_menu" name="Stage" parent="configuration_shows_menu"
+	    action="shows_stage_list_action"/>
+  <menuitem id="configuration_perf_date_menu" name="Presence" parent="configuration_shows_menu"
+	    action="shows_perf_date_list_action"/>
+</data></openerp>

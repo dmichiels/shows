@@ -1,0 +1,29 @@
+<openerp><data>
+  <record id="shows_workflow" model="workflow">
+    <field name="name">shows.workflow</field>
+    <field name="osv">shows.shows</field>
+    <field name="on_create">True</field>
+  </record>
+
+  <record id="first_contact" model="workflow.activity">
+    <field name="wkf_id" ref="shows_workflow"/>
+    <field name="flow_start" eval="True"/>
+    <field name="name">First Contact</field>
+    <field name="kind">function</field>
+    <field name="action">action_fc()</field>
+  </record>
+  <record id="accepted" model="workflow.activity">
+    <field name="wkf_id" ref="shows_workflow"/>
+    <field name="flow_stop">True</field>
+    <field name="name">Accepted</field>
+    <field name="kind">function</field>
+    <field name="action">action_accepted()</field>
+  </record>
+
+  <record id="trans_fc_accepted" model="workflow.transition">
+    <field name="act_from" ref="first_contact"/>
+    <field name="act_to" ref="accepted"/>
+    <field name="signal">accepted</field>
+  </record>
+  
+</data></openerp>
